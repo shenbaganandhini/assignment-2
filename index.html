@@ -2,9 +2,7 @@
 <htmL lang="en" ng-app="ShoppingListCheckOff">
   <head>
     <title>Shopping List Check Off</title>
-
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="bootstrap.min.css">
       <style>
         .emptyMessage {
           font-weight: bold;
@@ -24,7 +22,7 @@
 
     </style>
     <script src="angular.min.js"> </script>
-    <script src="app1.js"> </script>
+    <script src="app.js"> </script>
   </head>
 <body class="ng-scope" >
 
@@ -69,7 +67,7 @@
     <div class="col-md-6 ng-scope" ng-controller="AlreadyBoughtController as boughtt">
       <h2>Already Bought:</h2>
       <ul>
-          <li ng-repeat="item in boughtt.bought" > {{item.name}} of {{item.quantity}}</li>
+          <li ng-repeat="item in boughtt.bought" > {{ item.name }} of {{ item.quantity }}</li>
       </ul>
       <!-- ngIf: boughtt.bought.length==0 --><div class="emptyMessage ng-scope" ng-if="boughtt.bought.length==0">Nothing bought yet.</div><!-- end ngIf: boughtt.bought.length==0 -->
     </div>
